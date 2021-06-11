@@ -1,0 +1,126 @@
+﻿<%@ Master Language="VB" CodeFile="DelsuHome.master.vb" Inherits="DelsuHome" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+        	background-position:center 
+            width: 95%;
+        }
+        .style2
+        {
+            width: 760px;
+        }
+        </style>
+</head>
+<body background="pics/DELSU%20logo.jpg"; style="background-repeat:no-repeat; background-position:center">
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="style1">
+            <tr>
+                <td colspan="2">
+                    <img alt="DELSU E-Presence Header" 
+                        longdesc="Website and Images designed by Hamplus Technologies, +2348050736053, hampojohnpaul@gmail.com" 
+                        src="pics/e-presence.JPG" style="width: 100%; height: 95px" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="..::"></asp:Label>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp;
+                    <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="..::"></asp:Label>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AboutSys.aspx">About 
+                    Sys</asp:HyperLink>
+&nbsp;&nbsp;
+                    <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="..::"></asp:Label>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/FAQs.aspx">FAQs</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table align="right" class="style2">
+                        <tr>
+                            <td style="text-align: right">
+                                <asp:Label ID="Label5" runat="server" style="color: #0000FF" Text="Username:"></asp:Label>
+                                <asp:TextBox ID="txtUN" runat="server" BackColor="#FFFF99" ForeColor="#339933" 
+                                    style="color: #333333; background-color: #99CCFF"></asp:TextBox>
+                                &nbsp;
+                                <asp:Label ID="Label6" runat="server" style="color: #0000FF" Text="Password:"></asp:Label>
+                                <asp:TextBox ID="txtUP" runat="server" BackColor="#FFFF99" ForeColor="#339933" 
+                                    style="color: #333333; background-color: #99CCFF" TextMode="Password"></asp:TextBox>
+                                &nbsp;
+                                <asp:Button ID="btnLogin" runat="server" Text="LOGIN" />
+                                <br />
+                                <asp:Label ID="Label4" runat="server" Text="Forgot detail? If yes, just click "></asp:Label>
+                                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/GetDetails.aspx">HERE</asp:HyperLink>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left">
+                                <asp:Label ID="result" runat="server" style="color: #FF0000"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 25%">
+                    <asp:Panel ID="Panel4" runat="server">
+                        <asp:Menu ID="Menu1" runat="server">
+                            <Items>
+                                <asp:MenuItem Text="Quick Links" Value="Quick Links" Selectable="False">
+                                    <asp:MenuItem NavigateUrl="www.delsuonline.com" Text="DELSU Portal" 
+                                    Value="DELSU Portal"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="www.delsung.net" Text="DELSU Online" 
+                                    Value="DELSU Online"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="www.vanguardngr.com" Text="Vanguard News" 
+                                    Value="Vanguard News"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="www.sunnewsonline.com" Text="Sun News" 
+                                    Value="Sun News"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="www.google.com/DELSU+News" Text="DELSU News" 
+                                    Value="DELSU News"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="www.google.com/Delta+State+News" 
+                                    Text="Delta State News" Value="Delta State News"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:Panel>
+                </td>
+                <td class="style2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right">
+                    <asp:Panel ID="Panel3" runat="server">
+                        <table align="right" class="style2">
+                            <tr>
+                                <td style="text-align: right">
+                                    <asp:Label ID="Label7" runat="server" 
+                                        Text="If are a graduate and have not registered, Please "></asp:Label>
+                                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Register.aspx">REGISTER 
+                                    NOW</asp:HyperLink>
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <img alt="DELSU E-PRESENCE FOOTER" 
+                        longdesc="Website and Images designed by Hamplus Technologies, +2348050736053, hampojohnpaul@gmail.com" 
+                        src="pics/e-presence%20ft.jpg" style="width: 100%; height: 50px" /></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

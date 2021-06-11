@@ -1,0 +1,131 @@
+﻿<%@ Master Language="VB" CodeFile="AdminLecturers.master.vb" Inherits="AdminLecturers" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+        	background-position:center 
+            width: 95%;
+        }
+        </style>
+</head>
+<body background="pics/DELSU%20logo.jpg"; style="background-repeat:no-repeat; background-position:center">
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="style1">
+            <tr>
+                <td colspan="2">
+                    <img alt="DELSU E-Presence Header" 
+                        longdesc="Website and Images designed by Hamplus Technologies, +2348050736053, hampojohnpaul@gmail.com" 
+                        src="pics/e-presence.JPG" style="width: 100%; height: 95px" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="..::"></asp:Label>
+                    <asp:Menu ID="Menu2" runat="server">
+                        <Items>
+                            <asp:MenuItem Selectable="False" Text="Lecturer" Value="Lecturer">
+                                <asp:MenuItem Selectable="False" Text="Notice Board" Value="Notice Board">
+                                    <asp:MenuItem NavigateUrl="~/NoticeBoardView.aspx" Text="View" Value="View">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Add" Value="Add"></asp:MenuItem>
+                                    <asp:MenuItem Text="Edit" Value="Edit"></asp:MenuItem>
+                                    <asp:MenuItem Text="Erase" Value="Erase"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Questions" Value="Questions"></asp:MenuItem>
+                                <asp:MenuItem Text="Answers" Value="Answers"></asp:MenuItem>
+                                <asp:MenuItem Text="Test/Assignment" Value="Test/Assignment"></asp:MenuItem>
+                                <asp:MenuItem Text="Time table" Value="Time table"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+&nbsp;&nbsp;
+                    <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="..::"></asp:Label>
+&nbsp;<asp:Menu ID="Menu3" runat="server">
+                        <Items>
+                            <asp:MenuItem Selectable="False" Text="Administrator" Value="Administrator">
+                                <asp:MenuItem Selectable="False" Text="Lecturer" Value="Lecturer">
+                                    <asp:MenuItem NavigateUrl="~/LecturerView.aspx" Text="View" Value="View">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Add" Value="Add"></asp:MenuItem>
+                                    <asp:MenuItem Text="Modify" Value="Modify"></asp:MenuItem>
+                                    <asp:MenuItem Text="Delete" Value="Delete"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Time Table" Value="Time Table">
+                                    <asp:MenuItem Text="View" Value="View"></asp:MenuItem>
+                                    <asp:MenuItem Text="Create" Value="Create"></asp:MenuItem>
+                                    <asp:MenuItem Text="Edit" Value="Edit"></asp:MenuItem>
+                                    <asp:MenuItem Text="Expunge" Value="Expunge"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Notice Board" Value="Notice Board">
+                                    <asp:MenuItem Text="View" Value="View"></asp:MenuItem>
+                                    <asp:MenuItem Text="Post" Value="Post"></asp:MenuItem>
+                                    <asp:MenuItem Text="Edit" Value="Edit"></asp:MenuItem>
+                                    <asp:MenuItem Text="Erase" Value="Erase"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="System Operations" Value="System Operations"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    &nbsp;
+                    <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="..::"></asp:Label>
+                    <br />
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Home.aspx">Log out</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 25%">
+                    <asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem Text="Quick Links" Value="Quick Links" Selectable="False">
+                                <asp:MenuItem NavigateUrl="www.delsuonline.com" Text="DELSU Portal" 
+                                    Value="DELSU Portal"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="www.delsung.net" Text="DELSU Online" 
+                                    Value="DELSU Online"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="www.vanguardngr.com" Text="Vanguard News" 
+                                    Value="Vanguard News"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="www.sunnewsonline.com" Text="Sun News" 
+                                    Value="Sun News"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="www.google.com/DELSU+News" Text="DELSU News" 
+                                    Value="DELSU News"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="www.google.com/Delta+State+News" 
+                                    Text="Delta State News" Value="Delta State News"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <img alt="DELSU E-PRESENCE FOOTER" 
+                        longdesc="Website and Images designed by Hamplus Technologies, +2348050736053, hampojohnpaul@gmail.com" 
+                        src="pics/e-presence%20ft.jpg" style="width: 100%; height: 50px" /></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
